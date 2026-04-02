@@ -49,7 +49,7 @@ npm run build
 
 ## 🤖 Cómo se creó
 
-Este proyecto es un experimento de **AI-driven development**:
+Este proyecto es un experimento de **felipemartz** - github:
 
 1. **Prompt 1**: "Crea una landing page de una hamburguesería llamada 'Felipino' utilizando React, Tailwind CSS y Framer Motion con dark mode elegante y animaciones avanzadas"
 2. **Prompt 2**: "Corrige los problemas de blur en el modal y el typo en el texto"
@@ -57,7 +57,7 @@ Este proyecto es un experimento de **AI-driven development**:
 ✅ Resultado: Landing page completa y funcional en **2 prompts** sin escribir código manualmente.
 
 ### Detalles técnicos
-- Modelo: Claude (totalmente gratuito)
+- Modelo: stepfun/step-3.5-flash:free (totalmente gratuito)
 - Herramienta: Claude Code CLI
 - Tiempo total: ~15 minutos
 - Líneas de código generadas automáticamente: ~800 LOC
