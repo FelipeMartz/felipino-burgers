@@ -73,19 +73,19 @@ const Navbar = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
           ? 'bg-felipino-dark/95 backdrop-blur-md shadow-lg py-2'
-          : 'bg-transparent py-6'
+          : 'bg-transparent py-4'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
         <motion.div
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="flex items-center gap-3 cursor-pointer"
+          className="flex items-center gap-2 sm:gap-3 cursor-pointer"
         >
-          <div className="w-10 h-10 bg-gradient-to-br from-felipino-orange to-felipino-yellow rounded-xl flex items-center justify-center">
-            <span className="text-black font-bold text-xl">F</span>
+          <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-felipino-orange to-felipino-yellow rounded-xl flex items-center justify-center">
+            <span className="text-black font-bold text-lg sm:text-xl">F</span>
           </div>
-          <span className={`font-bold text-2xl tracking-tight ${scrolled ? 'text-white' : 'text-white'}`}>
+          <span className={`font-bold text-xl sm:text-2xl tracking-tight ${scrolled ? 'text-white' : 'text-white'}`}>
             Felipino
           </span>
         </motion.div>
@@ -107,7 +107,7 @@ const Navbar = () => {
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="bg-gradient-to-r from-felipino-orange to-felipino-orange-light text-black px-6 py-2.5 rounded-full font-bold text-sm shadow-lg hover:shadow-felipino-orange/50 transition-shadow"
+          className="bg-gradient-to-r from-felipino-orange to-felipino-orange-light text-black px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-bold text-xs sm:text-sm shadow-lg hover:shadow-felipino-orange/50 transition-shadow hidden sm:block"
         >
           Ordenar Ahora
         </motion.button>
@@ -183,7 +183,7 @@ const Hero = () => {
         }}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
-        className="relative w-full max-w-lg mx-auto"
+        className="relative w-full max-w-md mx-auto sm:max-w-lg"
       >
         <motion.div
           animate={{ y: [0, -15, 0] }}
@@ -193,7 +193,7 @@ const Hero = () => {
           <img
             src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&h=400&fit=crop"
             alt="Hamburguesa Premium"
-            className="w-full h-[400px] object-cover rounded-3xl shadow-2xl"
+            className="w-full h-64 sm:h-80 md:h-[400px] object-cover rounded-3xl shadow-2xl"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-3xl" />
         </motion.div>
@@ -207,7 +207,7 @@ const Hero = () => {
 
       <div className="absolute top-0 left-0 w-full h-[500px] bg-gradient-to-b from-felipino-orange/10 to-transparent" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-12 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-8 md:py-12 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -216,17 +216,17 @@ const Hero = () => {
         >
           <motion.p
             variants={subtitleVariants}
-            className="text-felipino-orange font-bold text-lg mb-4 tracking-widest uppercase"
+            className="text-felipino-orange font-bold text-base sm:text-lg mb-3 sm:mb-4 tracking-widest uppercase"
           >
             {subtitle}
           </motion.p>
 
-          <div className="flex flex-wrap justify-center md:justify-start gap-2 mb-6">
+          <div className="flex flex-wrap justify-center md:justify-start gap-1 sm:gap-2 mb-4 sm:mb-6">
             {title.split('').map((letter, index) => (
               <motion.span
                 key={index}
                 variants={letterVariants}
-                className="font-bold text-6xl md:text-8xl lg:text-9xl text-white tracking-tight"
+                className="font-bold text-4xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-9xl text-white tracking-tight"
                 style={{
                   textShadow: "0 0 40px rgba(255, 107, 53, 0.5)"
                 }}
@@ -238,7 +238,7 @@ const Hero = () => {
 
           <motion.p
             variants={subtitleVariants}
-            className="text-gray-400 text-lg md:text-xl max-w-lg mx-auto md:mx-0 leading-relaxed"
+            className="text-gray-400 text-sm sm:text-base md:text-lg max-w-md sm:max-w-lg mx-auto md:mx-0 leading-relaxed"
           >
             Descubre la fusión perfecta entre tradición y vanguardia.
             Cada bocado es una experiencia única preparada con los ingredientes más frescos.
@@ -246,19 +246,19 @@ const Hero = () => {
 
           <motion.div
             variants={subtitleVariants}
-            className="flex flex-wrap gap-4 justify-center md:justify-start mt-8"
+            className="flex flex-wrap gap-3 sm:gap-4 justify-center md:justify-start mt-6 sm:mt-8"
           >
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-felipino-orange to-felipino-orange-light text-black px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-felipino-orange/50 transition-all"
+              className="bg-gradient-to-r from-felipino-orange to-felipino-orange-light text-black px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg shadow-lg hover:shadow-felipino-orange/50 transition-all"
             >
               Ver Menú Completo
             </motion.button>
             <motion.button
               whileHover={{ scale: 1.05, borderColor: '#FF6B35' }}
               whileTap={{ scale: 0.95 }}
-              className="border-2 border-gray-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/5 transition-all"
+              className="border-2 border-gray-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-white/5 transition-all"
             >
               Reservar Mesa
             </motion.button>
@@ -308,7 +308,7 @@ const MenuCard = ({ item, onClick, isSelected, isExpanded }) => {
       whileHover={{ scale: 1.02, y: -8 }}
       whileTap={{ scale: 0.98 }}
     >
-      <div className="relative h-64 overflow-hidden">
+      <div className="relative h-56 sm:h-64 overflow-hidden">
         <motion.img
           layoutId={`image-${item.id}`}
           src={item.image}
@@ -317,21 +317,21 @@ const MenuCard = ({ item, onClick, isSelected, isExpanded }) => {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
-        <div className="absolute bottom-0 left-0 right-0 p-6">
+        <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6">
           <motion.h3
             layoutId={`name-${item.id}`}
-            className="text-white text-2xl font-bold mb-2"
+            className="text-white text-lg sm:text-2xl font-bold mb-1 sm:mb-2"
           >
             {item.name}
           </motion.h3>
           <motion.p
             layoutId={`description-${item.id}`}
-            className="text-gray-300 text-sm"
+            className="text-gray-300 text-xs sm:text-sm line-clamp-2"
           >
             {item.description}
           </motion.p>
-          <div className="flex items-center justify-between mt-3">
-            <span className="text-felipino-orange text-xl font-bold">
+          <div className="flex items-center justify-between mt-2 sm:mt-3">
+            <span className="text-felipino-orange text-lg sm:text-xl font-bold">
               {item.price}
             </span>
             <motion.div
@@ -385,8 +385,8 @@ const MenuDetail = ({ item, onClose }) => {
           onClick={(e) => e.stopPropagation()}
           layoutId={`card-${item.id}`}
         >
-          <div className="grid md:grid-cols-2">
-            <div className="relative h-full min-h-[400px]">
+          <div className="grid grid-cols-1 md:grid-cols-2">
+            <div className="relative h-64 sm:h-80 min-h-[300px]">
               <motion.img
                 layoutId={`image-${item.id}`}
                 src={item.image}
@@ -395,31 +395,31 @@ const MenuDetail = ({ item, onClose }) => {
               />
             </div>
 
-            <div className="p-8 flex flex-col justify-center">
+            <div className="p-4 sm:p-6 md:p-8 flex flex-col justify-center">
               <motion.h2
                 layoutId={`name-${item.id}`}
-                className="text-4xl font-bold text-white mb-4"
+                className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 md:mb-4"
               >
                 {item.name}
               </motion.h2>
 
               <motion.p
                 layoutId={`description-${item.id}`}
-                className="text-gray-400 text-lg mb-6"
+                className="text-gray-400 text-sm sm:text-base md:text-lg mb-4 md:mb-6"
               >
                 {item.description}
               </motion.p>
 
-              <div className="mb-6">
-                <h3 className="text-felipino-orange font-bold text-lg mb-4">Ingredientes</h3>
-                <div className="flex flex-wrap gap-3">
+              <div className="mb-4 md:mb-6">
+                <h3 className="text-felipino-orange font-bold text-base sm:text-lg mb-3 md:mb-4">Ingredientes</h3>
+                <div className="flex flex-wrap gap-2 sm:gap-3">
                   {item.ingredients.map((ingredient, idx) => (
                     <motion.span
                       key={idx}
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: idx * 0.05 }}
-                      className="bg-felipino-gray-light px-4 py-2 rounded-full text-sm text-gray-300"
+                      className="bg-felipino-gray-light px-3 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm text-gray-300"
                     >
                       {ingredient}
                     </motion.span>
@@ -427,20 +427,20 @@ const MenuDetail = ({ item, onClose }) => {
                 </div>
               </div>
 
-              <div className="flex items-center justify-between mb-6">
-                <span className="text-4xl font-bold text-felipino-orange">{item.price}</span>
-                <div className="flex gap-3">
+              <div className="flex flex-col sm:flex-row items-center sm:justify-between gap-3 md:gap-0 mb-4 md:mb-6">
+                <span className="text-2xl sm:text-3xl md:text-4xl font-bold text-felipino-orange">{item.price}</span>
+                <div className="flex gap-2 sm:gap-3 w-full sm:w-auto justify-center sm:justify-end">
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="bg-gray-700 text-white px-6 py-3 rounded-full font-medium hover:bg-gray-600 transition"
+                    className="bg-gray-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium text-sm sm:text-base hover:bg-gray-600 transition"
                   >
                     Personalizar
                   </motion.button>
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="bg-gradient-to-r from-felipino-orange to-felipino-orange-light text-black px-8 py-3 rounded-full font-bold shadow-lg"
+                    className="bg-gradient-to-r from-felipino-orange to-felipino-orange-light text-black px-6 sm:px-8 py-2 sm:py-3 rounded-full font-bold shadow-lg text-sm sm:text-base"
                   >
                     Agregar
                   </motion.button>
@@ -516,7 +516,7 @@ const MenuSection = () => {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {menuItems.map((item, index) => (
             <motion.div
               key={item.id}
@@ -548,25 +548,25 @@ const MenuSection = () => {
 // Sección Nosotros
 const AboutSection = () => {
   return (
-    <section id="nosotros" className="py-24 bg-felipino-dark relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+    <section id="nosotros" className="py-16 md:py-24 bg-felipino-dark relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-felipino-orange font-bold uppercase tracking-widest text-sm">Nuestra Historia</span>
-            <h2 className="text-5xl font-bold text-white mt-4 mb-6">
+            <span className="text-felipino-orange font-bold uppercase tracking-widest text-xs sm:text-sm">Nuestra Historia</span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mt-2 sm:mt-4 mb-4 sm:mb-6">
               Pasión por la<br/>excelencia
             </h2>
-            <p className="text-gray-400 text-lg leading-relaxed mb-6">
+            <p className="text-gray-400 text-sm sm:text-base leading-relaxed mb-4 sm:mb-6">
               En Felipino, creemos que una buena hamburguesa es más que comida: es una experiencia.
               Desde 2018, hemos estado reinventando el concepto de hamburguesería con ingredientes locales,
               técnicas innovadoras y un amor inquebrantable por la calidad.
             </p>
-            <p className="text-gray-400 text-lg leading-relaxed">
+            <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
               Cada día, nuestros chefs preparan todo desde cero: las salsas, los panes e incluso
               nuestras propias mezclas de especias. Porque en Felipino, no aceptamos menos que la perfección.
             </p>
@@ -583,12 +583,12 @@ const AboutSection = () => {
             <img
               src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&h=500&fit=crop"
               alt="Cocina Felipino"
-              className="relative w-full h-[500px] object-cover rounded-3xl shadow-2xl"
+              className="relative w-full h-64 sm:h-80 md:h-[400px] lg:h-[500px] object-cover rounded-3xl shadow-2xl"
             />
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-24">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 mt-12 md:mt-24">
           {[
             { number: '10K+', label: 'Clientes Satisfechos' },
             { number: '500+', label: 'Reseñas 5 Estrellas' },
@@ -603,8 +603,8 @@ const AboutSection = () => {
               transition={{ delay: index * 0.1 }}
               className="text-center"
             >
-              <div className="text-5xl font-bold text-felipino-orange mb-2">{stat.number}</div>
-              <div className="text-gray-400 uppercase text-sm tracking-wider">{stat.label}</div>
+              <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-felipino-orange mb-1 sm:mb-2">{stat.number}</div>
+              <div className="text-gray-400 uppercase text-xs sm:text-sm tracking-wider">{stat.label}</div>
             </motion.div>
           ))}
         </div>
@@ -616,23 +616,23 @@ const AboutSection = () => {
 // Sección Contacto
 const ContactSection = () => {
   return (
-    <section id="contacto" className="py-24 bg-felipino-darker">
+    <section id="contacto" className="py-16 md:py-24 bg-felipino-darker">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="max-w-7xl mx-auto px-6 text-center"
+        className="max-w-7xl mx-auto px-4 sm:px-6 text-center"
       >
-        <span className="text-felipino-orange font-bold uppercase tracking-widest text-sm">¿Tienes Hambre?</span>
-        <h2 className="text-5xl md:text-6xl font-bold text-white mt-4 mb-8">
+        <span className="text-felipino-orange font-bold uppercase tracking-widest text-xs sm:text-sm">¿Tienes Hambre?</span>
+        <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mt-2 sm:mt-4 mb-6 md:mb-8">
           ¡Ven a Visitarnos!
         </h2>
-        <p className="text-gray-400 text-xl max-w-2xl mx-auto mb-12">
+        <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto mb-8 md:mb-12 px-4">
           Te esperamos en nuestro local o pide a domicilio. Cada hamburguesa está hecha
           con el corazón y los ingredientes más frescos de la ciudad.
         </p>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-4xl mx-auto px-4 sm:px-0">
           {[
             { icon: '📍', label: 'Dirección', value: 'Calle del Sabor 123, Ciudad' },
             { icon: '📞', label: 'Teléfono', value: '+34 900 123 456' },
@@ -645,11 +645,11 @@ const ContactSection = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ scale: 1.05, y: -5 }}
-              className="bg-felipino-gray/50 backdrop-blur-sm border border-felipino-gray-light rounded-2xl p-8"
+              className="bg-felipino-gray/50 backdrop-blur-sm border border-felipino-gray-light rounded-2xl p-4 sm:p-6 md:p-8"
             >
-              <div className="text-4xl mb-4">{info.icon}</div>
-              <div className="text-felipino-orange font-bold uppercase text-sm mb-2">{info.label}</div>
-              <div className="text-white font-medium">{info.value}</div>
+              <div className="text-3xl sm:text-4xl mb-2 sm:mb-4">{info.icon}</div>
+              <div className="text-felipino-orange font-bold uppercase text-xs sm:text-sm mb-1 sm:mb-2">{info.label}</div>
+              <div className="text-white font-medium text-sm sm:text-base">{info.value}</div>
             </motion.div>
           ))}
         </div>
@@ -661,7 +661,7 @@ const ContactSection = () => {
           transition={{ delay: 0.4 }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="mt-12 bg-gradient-to-r from-felipino-orange to-felipino-orange-light text-black px-10 py-4 rounded-full font-bold text-xl shadow-lg hover:shadow-felipino-orange/50 transition-all"
+          className="mt-8 md:mt-12 bg-gradient-to-r from-felipino-orange to-felipino-orange-light text-black px-6 sm:px-10 py-3 sm:py-4 rounded-full font-bold text-base sm:text-xl shadow-lg hover:shadow-felipino-orange/50 transition-all"
         >
           Pedir Ahora 📱
         </motion.button>
@@ -673,20 +673,20 @@ const ContactSection = () => {
 // Footer
 const Footer = () => {
   return (
-    <footer className="bg-felipino-darker border-t border-felipino-gray-light py-8">
-      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-        <div className="flex items-center gap-3">
-          <div className="w-8 h-8 bg-gradient-to-br from-felipino-orange to-felipino-yellow rounded-lg flex items-center justify-center">
-            <span className="text-black font-bold">F</span>
+    <footer className="bg-felipino-darker border-t border-felipino-gray-light py-6 md:py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4">
+        <div className="flex items-center gap-2 sm:gap-3">
+          <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-br from-felipino-orange to-felipino-yellow rounded-lg flex items-center justify-center">
+            <span className="text-black font-bold text-xs sm:text-lg">F</span>
           </div>
-          <span className="text-white font-bold text-lg">Felipino</span>
+          <span className="text-white font-bold text-base sm:text-lg">Felipino</span>
         </div>
 
-        <div className="text-gray-500 text-sm">
+        <div className="text-gray-500 text-xs sm:text-sm text-center md:text-right">
           © 2024 Felipino. Todos los derechos reservados.
         </div>
 
-        <div className="flex gap-4">
+        <div className="flex gap-3 sm:gap-4">
           {['Instagram', 'Twitter', 'Facebook'].map((social) => (
             <motion.a
               key={social}

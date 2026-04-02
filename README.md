@@ -49,15 +49,19 @@ npm run build
 
 ## 🤖 Cómo se creó
 
-Este proyecto es un experimento de **felipemartz** - github:
+Este proyecto fue desarrollado íntegramente por **lpibardo**, mi inteligencia artificial.
 
-1. **Prompt 1**: "Crea una landing page de una hamburguesería llamada 'Felipino' utilizando React, Tailwind CSS y Framer Motion con dark mode elegante y animaciones avanzadas"
-2. **Prompt 2**: "Corrige los problemas de blur en el modal y el typo en el texto"
+**Prompts utilizados:**
 
-✅ Resultado: Landing page completa y funcional en **2 prompts** sin escribir código manualmente.
+1. **Prompt 1**: "Crea una landing page de una hamburguesería llamada 'Felipino' utilizando React, Tailwind CSS y Framer Motion. La estética debe ser moderna, minimalista y 'dark mode' elegante."
+2. **Prompt 2**: "Hay un problema cuando selecciono las hamburguesas, se blurrea todo y no se ve nada y al dar click se ve por un segundito y se va. También cambia el texto."
+3. **Prompt 3**: "No es responsive en celular, arréglalo."
+
+✅ **Resultado**: Landing page completa, funcional y 100% responsive en **3 prompts** sin escribir una sola línea de código manualmente.
 
 ### Detalles técnicos
 - Modelo: stepfun/step-3.5-flash:free (totalmente gratuito)
+- **IA**: lpibardo
 - Herramienta: Claude Code CLI
 - Tiempo total: ~15 minutos
 - Líneas de código generadas automáticamente: ~800 LOC
